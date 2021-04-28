@@ -51,7 +51,7 @@ catkin_make
 source ~/learning_ws/devel/setup.bash
 ```
 
-To know if you've done it correctly, first run your executable and launch `tesse_bridge.launch` as per usual. Type `rqt_image_view` into a new terminal. You should be able to see in the upper left dropdown menu topics `/tesse/center_cam/rgb/image_raw`, `/tesse/left_cam/rgb/image_raw`, `/tesse/right_cam/rgb/image_raw`. You should also see that your car in tesse spawns at the simple wall follower track from lab 3. Here's what it should look like:
+To know if you've done it correctly, first run your executable and launch `tesse_bridge.launch` as per usual. Type `rqt_image_view` into a new terminal. You should be able to see in the upper left dropdown menu topics `/tesse/center_cam/rgb/image_raw`, `/tesse/left_cam/rgb/image_raw`, `/tesse/right_cam/rgb/image_raw`. You should also see that your car in tesse spawns at the simple wall follower track from lab 3. Here's what it should look like:  
 <img src="./figures/wall_follower_simple.png" width="500">
 
 Clone your wall follower solution into this new catkin workspace along with this imitation_learning_tesse repo.
@@ -131,10 +131,10 @@ You will need to use the OpenCV functions getPerspectiveTransform and warpPerspe
 An example center camera view:  
 <img src="./figures/center.png" width="500">
 
-An example fake "left" camera view (or result of `rotate_car_right`):
+An example fake "left" camera view (or result of `rotate_car_right`):  
 <img src="./figures/leftcam.png" width="500">
 
-An example fake "right" camera view (or result of `rotate_car_left`):
+An example fake "right" camera view (or result of `rotate_car_left`):  
 <img src="./figures/rightcam.png" width="500">
 
 Notice that there is a black bar of blank spice left over on the sides of the "tilted" images as a result of our preprocessing technique - you might want to make sure that whatever cropping you are using in the `preprocess` helper function of the training notebook is cropping out that black bar, because the car won't see anything like that black bar when testing the deployed model in TESSE!
