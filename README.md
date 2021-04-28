@@ -128,7 +128,7 @@ The NEET lab linked above used a left camera and a right camera placed on either
 
 You will need to use the OpenCV functions getPerspectiveTransform and warpPerspective to implement the `rotate_car_left` and `rotate_car_right` helper functions in the training notebook. You'll have to play with how much to rotate the image (which will also affect the correct choice of the OFFSET_STEERING_ANGLE parameter used to generate fake steering angles corresponding to the left and right camera augmentations). Test out your rotation functions by visualizing the result!
 
-An example center camera view:
+An example center camera view:  
 <img src="./figures/center.png" width="500">
 
 An example fake "left" camera view (or result of `rotate_car_right`):
