@@ -1,0 +1,13 @@
+center_camera_topic: /tesse/center_cam/rgb/image_raw
+#left_camera_topic: /tesse/left_cam/rgb/image_raw
+#right_camera_topic: /tesse/right_cam/rgb/image_raw
+
+drive_topic: /tesse/drive
+velocity: 3 # in m/s - should be same as speed used for training data generation
+
+# parameters for time synchronization of topics
+queue_size: 1 # how many sets of messages to store from each channel (by timestamp) while waiting for messages to arrive + complete their "set"
+slop: 0.1 # delay (in seconds) with which messages can be synchronized
+
+# path to trained tensorflow model to use for inference
+model: TODO

@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="cnn" name="train" type="train.py" output="screen">
+        <rosparam command="load" file="$(find cnn)/params.yaml"/>
+    </node>
+</launch>
